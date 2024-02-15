@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Shayanti</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="jquery.fireworks.js"></script>
+  <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+  <!-------------Preloader--------------->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <div class="scrolldown">
+    <div class="icon"><i class="fa-solid fa-arrow-down"></i></div></i><p>Scroll<br>Down</p>
+  </div>
+  <div class="background">
+    <div id="example" align="center">
+  </div></div>
+
+  <div class="balloon">
+    <div class="balloon1">
+      <img src="images/balloon4.png" alt="">
+    </div>
+    <div class="balloon2">
+      <img src="images/balloon1-removebg-preview.png" alt="">
+    </div>
+    <div class="balloon3">
+      <img src="images/balloon3-removebg-preview.png" alt="">
+    </div>
+  </div>
+
+  <div class="bg_image">
+    <div class="image1"><img src="images/photo1.png" alt=""></div>
+    <div class="image2"><img src="images/photo2.jpg" alt=""></div>
+  </div>
+
+  <div class="word"><img src="images/happy2.png" alt=""></div>
+  <div class="number">
+    
+    <span class="s">S</span>
+    <span class="h">h</span>
+    <span class="a">a</span>
+    <span class="y">y</span>
+    <span class="a">a</span>
+    <span class="n">n</span>
+    <span class="t">t</span>
+    <span class="i">i</span>
+  </div>
+  <div class="container">
+    <div class="wish-box">
+      <p>
+        <span>Happy Birthday Shayanti</span>, One of the <span>best</span> people I've met online 🥺. Yep, the person who followed me on the <span>Super sus</span> game. It is the best thing that today we are <span>friends</span>😊. Otherwise, who is going to <span>irritate</span> you like I do?😁 And I do this so that you can learn how to <span>roast</span> others because you get roast easily😅, which you still haven't learned, and the only thing you learn is <span>backstabbing</span>. (hehe kidding😁).
+
+        For the past <span>2 months</span>, I have noticed that you have some <span>overthinking</span> issues🤔, which you know are not good. Just <span>remember</span>, you don't need to worry about your <span>future</span>😣 or what others will say, so enjoy every <span>moment</span> because we all have only one <span>life</span> and everything will get right, okay? And one thing I want to tell you is that I like to <span>mess</span> with people or <span>irritate</span> people 😁, and if I say something to you and you get <span>hurt</span> 🥺, just remember I didn't <span>mean</span> it 🥺. Okay, just talk to me, and I won't do it again. So just be <span>happy</span> and <span>smile</span> 🙂.
+
+        Sometimes I think that the way I've <span>irritated</span> you,😁 one day you probably will <span>block</span> me😅, but anyway, I will continue <span>irritating</span> you😁. And finally, I hope you get <span>everything</span> that you want (only good things 😁), and your <span>dreams</span> come true one day. So be <span>happy</span> and be <span>proud</span> of yourself because you got this 🤗. <span>Happy Birthday online sister</span>🥳.
+      </p>
+    </div>
+    <div class="wish-box">
+      <p>
+        Happy Birthday! On this joyous occasion, I want to express my warmest wishes for a day filled with love, laughter, and unforgettable moments. May this year be a chapter of new adventures, accomplishments, and cherished memories for you. As you blow out the candles, may each one carry a wish that comes true, bringing you happiness, success, and good health. Your presence in my life is a gift, and today is a celebration of the wonderful person you are. May the coming year be as bright and beautiful as your smile, and may all your dreams take flight. Cheers to another year of growth, love, and amazing experiences. Wishing you a fantastic birthday and an even more incredible year ahead!
+      </p>
+    </div>
+    <div class="contact" id="wishme">
+      <form action="https://formspree.io/f/mgegeoqk" method="POST" id="newyearform">
+        <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message" id="resizableTextarea" oninput="autoResize(this)" required></textarea>
+        <div class="input-box">
+          <input class="input-box1" name="Name" type="hidden" value="Shayanti" required>
+          <input type="submit" value="Send Message" class="btn">
+        </div>
+      </form>
+      <div>
+        <p class="copyright">© 2024 All Rights Reserved | Harshdeep Singh</p>
+    </div>
+    </div>
+  </div>
+
+  <script>
+    function autoResize(textarea) {
+      // Set the textarea height to its scrollHeight
+      textarea.style.height = '100px';
+      textarea.style.height = (textarea.scrollHeight) + 'px';
+    }
+    window.addEventListener("scroll", function () {
+        const pElement  = document.querySelector(".scrolldown");
+        const scrollPos = window.scrollY;
+        const scrollThreshold = 100;
+
+        if (scrollPos > scrollThreshold) {
+            pElement.style.display = 'none';
+        }
+    });
+
+
+    /***********************pre loader***********************/
+    const ImgPaths = [
+    'images/happy2.png',
+    'images/photo1.png',
+    'images/photo2.jpg',
+    'images/balloon3-removebg-preview.png',
+    'images/balloon1-removebg-preview.png',
+    'images/balloon4.png'
+    ];
+
+
+    function preloadImg(ImgPaths, callback) {
+      let loadImg = 0;
+
+      for (const ImgPath of ImgPaths) {
+          const img = new Image();
+          img.src = ImgPath;
+
+          console.log("load3");
+          img.onload = function() {
+            loadImg++;
+            if (loadImg === ImgPaths.length) {
+                callback();
+            }
+          };
+      }
+    }
+
+    function handleImgLoad() {
+      console.log("load2");
+      document.body.classList.add("loaded");
+    }
+
+
+    window.onload = function() {
+        console.log("load");
+        preloadImg(ImgPaths, handleImgLoad);
+    };
+  </script>
+
+</body>
+</html>
